@@ -15,3 +15,13 @@ shallow rendering -- only tries to render outermost part of child elements
 
 shallow renderer: instance() func allows accessing object's members:
   app.instance().removeItem();
+
+
+npm run test -- --coverage
+
+
+
+Bootstrap CDN:
+https://getbootstrap.com/docs/3.3/getting-started/
+
+copy the link into the index.html file

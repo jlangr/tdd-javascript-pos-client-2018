@@ -73,6 +73,7 @@ ShallowWrapper {
           Void
 </Button>,
       ],
+      "className": "item",
     },
     "ref": null,
     "rendered": Array [
@@ -284,6 +285,7 @@ ShallowWrapper {
             Void
 </Button>,
         ],
+        "className": "item",
       },
       "ref": null,
       "rendered": Array [

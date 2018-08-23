@@ -8,7 +8,7 @@ class Item extends Component {
   }
   render() { 
     return (
-      <div>
+      <div className='item'>
         <Form>
           <FormGroup>
             <ControlLabel>Item</ControlLabel>
