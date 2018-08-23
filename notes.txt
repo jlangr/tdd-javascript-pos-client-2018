@@ -1,0 +1,17 @@
+for snapshots: press U to update snapshot (that you approve of)
+
+.btn-add    class = .
+
+
+NOTE: if you change the test structure, you will get an 'obsolete' warning from the snapshot match; you can press U to update.
+
+
+      item.find('.input-description').simulate('change', { target: { value: 'xyz' }});
+
+change object--holds input data
+
+
+shallow rendering -- only tries to render outermost part of child elements
+
+shallow renderer: instance() func allows accessing object's members:
+  app.instance().removeItem();
