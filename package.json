@@ -19,6 +19,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "axios-mock-adapter": "^1.15.0",
     "enzyme": "^3.4.4",
     "enzyme-adapter-react-16": "^1.2.0",
     "react-test-renderer": "^16.4.2",

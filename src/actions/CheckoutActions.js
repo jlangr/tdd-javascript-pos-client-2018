@@ -2,24 +2,20 @@ import * as type from '../actions/types';
 import ax from 'axios';
 
 const server = 'http://localhost:3101';
-const request = path => `${server}${path}`;
+export const request = path => `${server}${path}`;
 
 // TODO tests for these
-export const createCheckout = () => {
-  return dispatch => {
-    return ax.post(request('/checkouts'), {})
+export const createCheckout = () => 
+  dispatch => 
+    ax.post(request('/checkouts'), {})
       .then(response => dispatch(replaceCheckout(response.data)))
-      .catch(errorObj => dispatch(error(errorObj, 'unable to load song')));
-  }
-};
+      .catch(errorObj => dispatch(error(errorObj, 'unable to create checkout')));
 
-export const postItem = (scanCode, checkoutId) => {
-  return dispatch => {
-    return ax.post(request(`/checkouts/${checkoutId}/items`), {"upc": scanCode})
+export const postItem = (scanCode, checkoutId) => 
+  dispatch => 
+    ax.post(request(`/checkouts/${checkoutId}/items`), {"upc": scanCode})
       .then(response => dispatch(addItem(response.data)))
       .catch(errorObj => dispatch(error(errorObj, 'unable to create item')));
-  }
-};
 
 const error = (errorObj, message) => ({ type: type.ERROR, payload: `${message}: ${errorObj.toString()}` });
 
