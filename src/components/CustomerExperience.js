@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, FormControl, ControlLabel, Label } from 'react-bootstrap';
+import { Button, Col, FormControl, Grid, Label, Row } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import Table from 'rc-table'; // see https://github.com/react-component/table 
 
@@ -31,26 +31,30 @@ export class CustomerExperience extends Component {
   renderDeleteButton = (_o, row, index) => 
     <Button id={`btn-void-${row.id}`} onClick={() => {}}>Void</Button>;
 
+    // <FormGroup>
+
   render() {
     return(
       <div>
         <h3>Welcome, Shopper!</h3>
         <h4>Items</h4>
-        <Table id='table-items'
-          columns={this.itemTableColumns} 
-          rowKey='id'
-          data={this.props.items} 
-        />
+        <Table id='table-items' columns={this.itemTableColumns} rowKey='id' data={this.props.items} />
         <hr />
-        <Form>
-          <FormGroup>
-            <Button className='btn-add' onClick={this.addItem}>Add Item</Button>
-            <ControlLabel>Scan code</ControlLabel>
-            <FormControl className='input-scan-code'
-              onChange={ event => this.setState({ scanCode: event.target.value }) } />
-          </FormGroup>
-          <Label className='errorMessage'>{this.props.error}</Label>
-        </Form>
+        <div>
+          <Grid>
+            <Row>
+              <Col xs={6} md={4}>
+                <Button className='btn-add' onClick={this.addItem}>Add Item by Scan Code</Button>
+              </Col>
+              <Col xs={6} md={4}>
+                <FormControl className='input-scan-code' 
+                  type='text' 
+                  onChange={ event => this.setState({ scanCode: event.target.value }) } />
+              </Col>
+            </Row>
+            <Row><Label className='errorMessage'>{this.props.error}</Label></Row>
+          </Grid>
+      </div>
       </div>
     );
   }

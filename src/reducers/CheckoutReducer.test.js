@@ -24,7 +24,7 @@ describe('checkout reducer', () => {
     });
 
     describe('replace checkout', () => {
-      it('', () => {
+      it('updates id and items in state', () => {
         const newCheckout = { id: 1, items: [] };
         newState = CheckoutReducer(undefined, actions.replaceCheckout(newCheckout));
 
