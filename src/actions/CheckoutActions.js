@@ -16,7 +16,7 @@ export const postItem = (scanCode, checkoutId) =>
       .then(response => dispatch(addItem(response.data)))
       .catch(errorObj => dispatch(error(errorObj, 'unable to create item')));
 
-const error = (errorObj, message) => ({ type: type.ERROR, payload: `${message}: ${errorObj.toString()}` });
+export const error = (errorObj, message) => ({ type: type.ERROR, payload: `${message}: ${errorObj.toString()}` });
 
 export const replaceCheckout = checkout => ({ type: type.REPLACE_CHECKOUT, payload: checkout });
 

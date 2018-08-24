@@ -1,24 +1,20 @@
-import { ADD_ITEM, ERROR, REPLACE_CHECKOUT } from "../actions/types";
+import * as type from "../actions/types";
 
-export const INITIAL_STATE = {
-  items: [],
-  id: 0,
-  error: undefined
-};
+export const INITIAL_STATE = { items: [], id: 0, error: undefined };
 
-// TODO tests, also around clearing error
 export default(state = INITIAL_STATE, action) => {
-  // TODO common code to clear error
+  let error = undefined;
+
   switch(action.type) {
-    case REPLACE_CHECKOUT:
+    case type.REPLACE_CHECKOUT:
       const checkout = action.payload;
-      return { ...state, error: undefined, items: checkout.items, id: checkout.id };
+      return { ...state, error, items: checkout.items, id: checkout.id };
 
-    case ADD_ITEM:
+    case type.ADD_ITEM:
       const newItem = action.payload;
-      return { ...state, error: undefined, items: [...state.items, newItem]};
+      return { ...state, error, items: [...state.items, newItem]};
 
-    case ERROR:
+    case type.ERROR:
       return { ...state, error: action.payload };
 
     default:

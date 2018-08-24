@@ -2,7 +2,6 @@ import * as actions from './CheckoutActions';
 import * as type from './types';
 import ax from 'axios';
 import MockAdapter from 'axios-mock-adapter';
-import configureMockStore from 'redux-mock-store';
 
 describe('createCheckout', () => {
   let mock;
