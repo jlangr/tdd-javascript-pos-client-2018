@@ -4,7 +4,7 @@ import ax from 'axios';
 const server = 'http://localhost:3101';
 export const request = path => `${server}${path}`;
 
-export const createCheckout = () => 
+export const createCheckout = () =>
   dispatch => 
     ax.post(request('/checkouts'), {})
       .then(response => dispatch(replaceCheckout(response.data)))

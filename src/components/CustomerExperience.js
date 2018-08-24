@@ -61,7 +61,6 @@ export class CustomerExperience extends Component {
 };
 
 const mapStateToProps = ({ checkout }) => {
-  console.log('props', checkout);
   return { ...checkout, checkoutId: checkout.id };
 };
 
