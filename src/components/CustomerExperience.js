@@ -5,6 +5,8 @@ import Table from 'rc-table'; // see https://github.com/react-component/table
 
 import { createCheckout, postItem } from '../actions';
 
+export const importedActions = { createCheckout, postItem };
+
 export class CustomerExperience extends Component {
   constructor() {
     super();
@@ -30,8 +32,6 @@ export class CustomerExperience extends Component {
 
   renderDeleteButton = (_o, row, index) => 
     <Button id={`btn-void-${row.id}`} onClick={() => {}}>Void</Button>;
-
-    // <FormGroup>
 
   render() {
     return(
@@ -60,6 +60,9 @@ export class CustomerExperience extends Component {
   }
 };
 
-const mapStateToProps = ({ checkout }) => ({ ...checkout, checkoutId: checkout.id });
+const mapStateToProps = ({ checkout }) => {
+  console.log('props', checkout);
+  return { ...checkout, checkoutId: checkout.id };
+};
 
-export default connect(mapStateToProps, { createCheckout, postItem })(CustomerExperience);
+export default connect(mapStateToProps, importedActions)(CustomerExperience);

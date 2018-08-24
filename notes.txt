@@ -1,3 +1,5 @@
+RENAME: F2
+
 for snapshots: press U to update snapshot (that you approve of)
 
 .btn-add    class = .

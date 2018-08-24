@@ -2,10 +2,8 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { CustomerExperience } from './CustomerExperience';
 
-
 describe('CustomerExperience', () => {
   let component = shallow(<CustomerExperience />);
-  const id = 1;
 
   it('renders correctly', () => {
     expect(component).toMatchSnapshot();
@@ -22,27 +20,26 @@ describe('CustomerExperience', () => {
     });
   });
 
-  // TODO on click does action get invoked
+  describe('when clicking `add item` button', () => {
+    it('calls the addItem callback', () => {
+      const mockPostItem = jest.fn();
+      const props = { checkoutId: 1001, postItem: mockPostItem };
+      const injectedComponent = shallow(<CustomerExperience { ...props } />); 
+      injectedComponent.setState({ scanCode: 'scanCode123' });
 
-  // describe('when clicking `void item` button', () => {
-  //   beforeEach(() => {
-  //     itemComponent.find('.btn-void').simulate('click');
-  //   });
+      injectedComponent.find('.btn-add').simulate('click');
 
-  //   it('calls the void item callback', () => {
-  //     expect(mockVoid).toHaveBeenCalledWith(item.id);
-  //   });
-  // });
+      expect(mockPostItem).toHaveBeenCalledWith('scanCode123', 1001);
+    });
+  });
 
-  describe('when clicking `scan item`', async () => {
-    beforeEach(async () => {
+  xdescribe('when clicking `scan item`', async () => {
+    it('adds a new item to `state`', () => {
       // component.setState({ items: [] });
       // see https://github.com/airbnb/enzyme/issues/1153
       // component.find('.btn-add').simulate('click');
       // component = component.update();
-    })
-
-    it('adds a new item to `state`', () => {
+      // assert that the DOM contains the new row... not so easy
     });
   });
 });
