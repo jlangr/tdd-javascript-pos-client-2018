@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "rc-table": "^6.3.2",
     "react": "^16.4.2",
     "react-bootstrap": "^0.32.3",
     "react-dom": "^16.4.2",
@@ -15,6 +16,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "axios": "^0.18.0",
     "enzyme": "^3.4.4",
     "enzyme-adapter-react-16": "^1.2.0",
     "react-test-renderer": "^16.4.2"

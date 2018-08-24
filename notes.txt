@@ -25,3 +25,10 @@ Bootstrap CDN:
 https://getbootstrap.com/docs/3.3/getting-started/
 
 copy the link into the index.html file
+
+
+create your own VS snippets:
+https://code.visualstudio.com/docs/editor/userdefinedsnippets
+
+
+ <div><h3>Welcome, Shopper!</h3><h4>Items</h4><div class="rc-table rc-table-scroll-position-left"><div class="rc-table-content"><div class="rc-table-body"><table class=""><colgroup><col style="width:200px;min-width:200px"/><col style="width:100px;min-width:100px"/><col/></colgroup><thead class="rc-table-thead"><tr><th class="">Description</th><th class="">Price</th><th class="">Operations</th></tr></thead><tbody class="rc-table-tbody"><tr class="rc-table-row  rc-table-row-level-0" data-row-key="1"><td class=""><span style="padding-left:0px" class="rc-table-row-indent indent-level-0"></span>milk</td><td class="">3.29</td><td class=""><button id="btn-void-1" type="button" class="btn btn-default">Void</button></td></tr></tbody></table></div></div></div><hr/><form class=""><div class="form-group"><button type="button" class="btn-add f btn btn-default">Add Item</button><label class="f control-label">Scan code</label><input class="input-scan-code f form-control"/></div></form></div>

@@ -12,6 +12,14 @@ body {
   padding: 20px;
 }
 
+.input-scan-code {
+  width: 150px;
+}
+
+.f {
+  float: left;
+}
+
 Button {
   margin: 10px;
 }
