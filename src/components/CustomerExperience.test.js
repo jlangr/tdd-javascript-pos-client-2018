@@ -33,7 +33,8 @@ describe('CustomerExperience', () => {
     });
   });
 
-  xdescribe('when clicking `scan item`', async () => {
+  /*
+  describe('when clicking `scan item`', async () => {
     it('adds a new item to `state`', () => {
       // component.setState({ items: [] });
       // see https://github.com/airbnb/enzyme/issues/1153
@@ -42,4 +43,5 @@ describe('CustomerExperience', () => {
       // assert that the DOM contains the new row... not so easy
     });
   });
+  */
 });
