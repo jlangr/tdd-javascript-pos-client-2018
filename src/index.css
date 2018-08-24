@@ -5,6 +5,11 @@ body {
   padding-right: 20%;
 }
 
+.errorMessage {
+  font-size: 20;
+  color: 'red';
+}
+
 .item {
   border: 1px solid lightgray;
   border-radius: 5px;

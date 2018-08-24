@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, FormGroup, FormControl, ControlLabel, Button } from 'react-bootstrap';
+import { Button, Form, FormGroup, FormControl, ControlLabel, Label } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import Table from 'rc-table'; // see https://github.com/react-component/table 
 
@@ -16,7 +16,7 @@ export class CustomerExperience extends Component {
     return [
       { title: 'Description', dataIndex: 'description', key: 'description', width: 200 }, 
       { title: 'Price', dataIndex: 'price', key: 'price', width: 100 },
-      { title: 'Operations', dataIndex: '', key: 'operations', render: this.renderDelete }
+      { title: '', dataIndex: '', key: 'operations', render: this.renderDeleteButton }
     ];
   }
 
@@ -28,11 +28,8 @@ export class CustomerExperience extends Component {
     this.props.postItem(this.state.scanCode, this.props.checkoutId);
   }
 
-  renderDelete = (_o, row, index) => {
-    return (
-      <Button id={`btn-void-${row.id}`} onClick={() => {}}>Void</Button>
-    );
-  }
+  renderDeleteButton = (_o, row, index) => 
+    <Button id={`btn-void-${row.id}`} onClick={() => {}}>Void</Button>;
 
   render() {
     return(
@@ -52,17 +49,13 @@ export class CustomerExperience extends Component {
             <FormControl className='input-scan-code'
               onChange={ event => this.setState({ scanCode: event.target.value }) } />
           </FormGroup>
+          <Label className='errorMessage'>{this.props.error}</Label>
         </Form>
       </div>
     );
   }
 };
 
-const mapStateToProps = ({ checkout }) => {
-  return {
-    checkoutId: checkout.id,
-    items: checkout.items
-  };
-};
+const mapStateToProps = ({ checkout }) => ({ ...checkout, checkoutId: checkout.id });
 
 export default connect(mapStateToProps, { createCheckout, postItem })(CustomerExperience);

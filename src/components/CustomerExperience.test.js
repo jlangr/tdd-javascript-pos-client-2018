@@ -24,6 +24,16 @@ describe('CustomerExperience', () => {
 
   // TODO on click does action get invoked
 
+  // describe('when clicking `void item` button', () => {
+  //   beforeEach(() => {
+  //     itemComponent.find('.btn-void').simulate('click');
+  //   });
+
+  //   it('calls the void item callback', () => {
+  //     expect(mockVoid).toHaveBeenCalledWith(item.id);
+  //   });
+  // });
+
   describe('when clicking `scan item`', async () => {
     beforeEach(async () => {
       // component.setState({ items: [] });
