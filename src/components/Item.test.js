@@ -16,17 +16,6 @@ describe('Item', () => {
     expect(itemComponent.state()).toEqual({ id: 0, description: '', price: 0 });
   });
 
-  describe('when typing into input', () => {
-    const description = 'milk';
-
-    beforeEach(() => {
-      itemComponent.find('.input-description').simulate('change', { target: { value: description }});
-    });
-
-    it('updates the item in `state`', () => {
-      expect(itemComponent.state().description).toEqual(description);
-    });
-  });
 
   describe('when typing into the price input', () => {
     const price = 4.00;

@@ -76,7 +76,7 @@ ShallowWrapper {
                               block={false}
                               bsClass="btn"
                               bsStyle="default"
-                              className="btn-add f"
+                              className="btn-add"
                               disabled={false}
                               onClick={[Function]}
                     >
@@ -84,14 +84,13 @@ ShallowWrapper {
                     </Button>
                     <ControlLabel
                               bsClass="control-label"
-                              className="f"
                               srOnly={false}
                     >
                               Scan code
                     </ControlLabel>
                     <FormControl
                               bsClass="form-control"
-                              className="input-scan-code f"
+                              className="input-scan-code"
                               componentClass="input"
                               onChange={[Function]}
                     />
@@ -190,7 +189,7 @@ ShallowWrapper {
                         block={false}
                         bsClass="btn"
                         bsStyle="default"
-                        className="btn-add f"
+                        className="btn-add"
                         disabled={false}
                         onClick={[Function]}
             >
@@ -198,14 +197,13 @@ ShallowWrapper {
             </Button>
             <ControlLabel
                         bsClass="control-label"
-                        className="f"
                         srOnly={false}
             >
                         Scan code
             </ControlLabel>
             <FormControl
                         bsClass="form-control"
-                        className="input-scan-code f"
+                        className="input-scan-code"
                         componentClass="input"
                         onChange={[Function]}
             />
@@ -227,7 +225,7 @@ ShallowWrapper {
                 block={false}
                 bsClass="btn"
                 bsStyle="default"
-                className="btn-add f"
+                className="btn-add"
                 disabled={false}
                 onClick={[Function]}
 >
@@ -235,14 +233,13 @@ ShallowWrapper {
 </Button>,
               <ControlLabel
                 bsClass="control-label"
-                className="f"
                 srOnly={false}
 >
                 Scan code
 </ControlLabel>,
               <FormControl
                 bsClass="form-control"
-                className="input-scan-code f"
+                className="input-scan-code"
                 componentClass="input"
                 onChange={[Function]}
 />,
@@ -260,7 +257,7 @@ ShallowWrapper {
                 "bsClass": "btn",
                 "bsStyle": "default",
                 "children": "Add Item",
-                "className": "btn-add f",
+                "className": "btn-add",
                 "disabled": false,
                 "onClick": [Function],
               },
@@ -275,7 +272,6 @@ ShallowWrapper {
               "props": Object {
                 "bsClass": "control-label",
                 "children": "Scan code",
-                "className": "f",
                 "srOnly": false,
               },
               "ref": null,
@@ -288,7 +284,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "bsClass": "form-control",
-                "className": "input-scan-code f",
+                "className": "input-scan-code",
                 "componentClass": "input",
                 "onChange": [Function],
               },
@@ -370,7 +366,7 @@ ShallowWrapper {
                                     block={false}
                                     bsClass="btn"
                                     bsStyle="default"
-                                    className="btn-add f"
+                                    className="btn-add"
                                     disabled={false}
                                     onClick={[Function]}
                         >
@@ -378,14 +374,13 @@ ShallowWrapper {
                         </Button>
                         <ControlLabel
                                     bsClass="control-label"
-                                    className="f"
                                     srOnly={false}
                         >
                                     Scan code
                         </ControlLabel>
                         <FormControl
                                     bsClass="form-control"
-                                    className="input-scan-code f"
+                                    className="input-scan-code"
                                     componentClass="input"
                                     onChange={[Function]}
                         />
@@ -484,7 +479,7 @@ ShallowWrapper {
                             block={false}
                             bsClass="btn"
                             bsStyle="default"
-                            className="btn-add f"
+                            className="btn-add"
                             disabled={false}
                             onClick={[Function]}
               >
@@ -492,14 +487,13 @@ ShallowWrapper {
               </Button>
               <ControlLabel
                             bsClass="control-label"
-                            className="f"
                             srOnly={false}
               >
                             Scan code
               </ControlLabel>
               <FormControl
                             bsClass="form-control"
-                            className="input-scan-code f"
+                            className="input-scan-code"
                             componentClass="input"
                             onChange={[Function]}
               />
@@ -521,7 +515,7 @@ ShallowWrapper {
                   block={false}
                   bsClass="btn"
                   bsStyle="default"
-                  className="btn-add f"
+                  className="btn-add"
                   disabled={false}
                   onClick={[Function]}
 >
@@ -529,14 +523,13 @@ ShallowWrapper {
 </Button>,
                 <ControlLabel
                   bsClass="control-label"
-                  className="f"
                   srOnly={false}
 >
                   Scan code
 </ControlLabel>,
                 <FormControl
                   bsClass="form-control"
-                  className="input-scan-code f"
+                  className="input-scan-code"
                   componentClass="input"
                   onChange={[Function]}
 />,
@@ -554,7 +547,7 @@ ShallowWrapper {
                   "bsClass": "btn",
                   "bsStyle": "default",
                   "children": "Add Item",
-                  "className": "btn-add f",
+                  "className": "btn-add",
                   "disabled": false,
                   "onClick": [Function],
                 },
@@ -569,7 +562,6 @@ ShallowWrapper {
                 "props": Object {
                   "bsClass": "control-label",
                   "children": "Scan code",
-                  "className": "f",
                   "srOnly": false,
                 },
                 "ref": null,
@@ -582,7 +574,7 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "bsClass": "form-control",
-                  "className": "input-scan-code f",
+                  "className": "input-scan-code",
                   "componentClass": "input",
                   "onChange": [Function],
                 },
